@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> |I Music app I|</h1>
+    </header>
+
+    <div class="player">
+        <h2>Playlist</h2>
+        <div id="songlist"></div>
+        <div id="controls">
+            <div class="controls_wrapper">
+                <span onclick="playAudio()">&#9658</span>
+                <span onclick="pauseAudio()">&#10074;&#10074</span>
+            </div>
+            <p id="currentSong"></p>
+            
+            <div class="volume">
+                <span>-</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+                <span>+</span>
+            </div>
+            <audio id="player" ontimeupdate="updateProgress()">
+                <source id="source">
+                audio not supported
+            </audio>
+            <progress id="progress" value="0" max="100"></progress>
+        </div>
+    
+    </div>
+<footer>
+    <p>La musique provient de: <a href="https://www.bensound.com/royalty-free-music ">https://www.bensound.com/royalty-free-music </a></p>
+</footer>
+    <script src="app.js"></script>
+</body>
+</html>

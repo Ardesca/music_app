@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'AlphaCentauri';
+    src:url('assets/webfonts_AlphaCentauri/AlphaCentauri.ttf.woff');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: 'Robote', sans-serif;
+    width: 100vw;
+    min-height:100vh;
+    background: url('assets/cool-background.png') no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+header{
+    text-align: center;
+    font-family: 'AlphaCentauri';
+    display: flex;
+    justify-content: center;
+    
+ 
+}
+header h1 {
+    width: 250px;
+    padding: 15px;
+    background: rgba( 255, 255, 255, 0.70 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 50px );
+    color:#E76F51;
+    text-shadow: #E76F51 0px 0px 30px;
+    border-radius: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.player{
+    width: 95vw;
+    height: 80vh;
+    display: flex;
+    flex-flow: column wrap;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+    backdrop-filter: blur( 15px );
+    border-radius: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: relative;
+    }
+
+.player h2{
+    font-family: 'AlphaCentauri';
+    margin-left: 30px;
+    padding: 15px;
+    background: #264653;
+    box-shadow: 0 10px 20px 0 #264653;
+    backdrop-filter: blur( 15px );
+    border-top-left-radius:30px ;
+    border-bottom-left-radius: 30px;
+    color: #F4A261;
+    text-shadow: #F4A261 0px 0px 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#songlist{
+    align-self: center;
+    width: 80vw;
+    height: 60vh;
+    
+}
+#songlist li{
+    list-style: none;
+    padding: 30px;
+    
+    background: linear-gradient(180deg, rgba( 255, 255, 255, 0.45 ), rgba( 255, 255, 255, 0.15 ));
+    box-shadow: 0 -8px 30px 0 rgba( 31, 38, 135, 0.15 );
+    cursor: pointer;
+}
+#songlist li:hover{
+    background: rgba( 255, 255, 255, 0.75 );
+    transform: scale(1.1);
+    color:#2A9D8F;
+    text-shadow: #2A9D8F 0px 0px 20px;    
+}
+#controls{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+    backdrop-filter: blur( 15px );
+    border-radius: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#currentSong{
+    color: #E76F51;
+    text-shadow: #F4A261 0px 0px 20px;
+}
+.controls_wrapper{
+    color: #E9C46A;
+    font-weight: bolder;
+}
+.controls_wrapper span:first-child{
+    font-size:30px;
+    padding: 5px;   
+    border-radius: 50%;
+    cursor: pointer;  
+}
+.controls_wrapper span:last-child{
+    font-size:30px;
+    padding: 5px;   
+    border-radius: 50%;
+    cursor: pointer;  
+}
+progress{
+      /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+    border-radius:50px ;
+ width: 250px;
+ height: 10px;
+}
+
+progress[value]::-moz-progress-bar { 
+    background-image:
+      -moz-linear-gradient(
+        135deg, 
+        transparent 33%, 
+        rgba(0, 0, 0, 0.1) 33%, 
+        rgba(0, 0, 0, 0.1) 66%, 
+        transparent 66% 
+      ),
+      -moz-linear-gradient(
+        top, 
+        rgba(255, 255, 255, 0.25), 
+        rgba(0, 0, 0, 0.25)
+      ),
+      -moz-linear-gradient(
+        left, 
+        #09c, 
+        #f44
+      );
+  
+      border-radius:50px ;
+    background-size: 35px 20px, 100% 100%, 100% 100%; 
+  }
+
+footer{
+    position: absolute;
+    bottom: 0;
+
+}
+footer a{
+    color: #2A9D8F;
+    text-decoration: none;
+}
